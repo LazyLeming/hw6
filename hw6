@@ -1,0 +1,252 @@
+#include <iostream>
+#include <windows.h>
+#include <format>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+void cubes(int Dice){
+	switch (Dice)
+	{ 
+	case 1:
+		cout << " __________________ \n";
+		cout << "|                  |\n";
+		cout << "|                  |\n";
+		cout << "|                  |\n";
+		cout << "|       ####       |\n";
+		cout << "|       ####       |\n";
+		cout << "|       ####       |\n";
+		cout << "|                  |\n";
+		cout << "|                  |\n";
+		cout << " ------------------ \n";
+		break;
+	case 2:
+		cout << " __________________ \n";
+		cout << "|                  |\n";
+		cout << "|   ###            |\n";
+		cout << "|   ###            |\n";
+		cout << "|                  |\n";
+		cout << "|                  |\n";
+		cout << "|                  |\n";
+		cout << "|             ###  |\n";
+		cout << "|             ###  |\n";
+		cout << " ------------------ \n";
+		break;
+	case 3:
+		cout << " __________________ \n";
+		cout << "|                  |\n";
+		cout << "|  ###             |\n";
+		cout << "|  ###             |\n";
+		cout << "|       ####       |\n";
+		cout << "|       ####       |\n";
+		cout << "|       ####       |\n";
+		cout << "|             ###  |\n";
+		cout << "|             ###  |\n";
+		cout << " ------------------ \n";
+		break;
+	case 4:
+		cout << " __________________ \n";
+		cout << "|                  |\n";
+		cout << "|  ###         ### |\n";
+		cout << "|  ###         ### |\n";
+		cout << "|                  |\n";
+		cout << "|                  |\n";
+		cout << "|                  |\n";
+		cout << "|  ###         ### |\n";
+		cout << "|  ###         ### |\n";
+		cout << " ------------------ \n";
+		break;
+	case 5:
+		cout << " __________________ \n";
+		cout << "| ###          ### |\n";
+		cout << "| ###          ### |\n";
+		cout << "|                  |\n";
+		cout << "|       ###        |\n";
+		cout << "|       ###        |\n";
+		cout << "|                  |\n";
+		cout << "| ###          ### |\n";
+		cout << "| ###          ### |\n";
+		cout << " ------------------ \n";
+		break;
+	case 6:
+		cout << " __________________ \n";
+		cout << "| ###          ### |\n";
+		cout << "| ###          ### |\n";
+		cout << "|                  |\n";
+		cout << "| ###          ### |\n";
+		cout << "| ###          ### |\n";
+		cout << "|                  |\n";
+		cout << "| ###          ### |\n";
+		cout << "| ###          ### |\n";
+		cout << " ------------------ \n";
+		break;
+	}
+}
+int Res()
+{
+	int a = rand() % 5 + 1;
+	cubes(a);
+	int b = rand() % 5 + 1;
+	cubes(b);
+	int Result;
+	Result = a + b;
+	cout << "Result: " << Result << "\n\n";
+	return Result;
+}
+
+
+
+
+void Reverse(int* array, int size)
+{
+	for (int i = 0; i < size / 2; ++i)
+	{
+		int temp = array[i];
+		array[i] = array[size - 1 - i];
+		array[size - 1 - i] = temp;
+	}
+}
+int main()
+{
+	//#1
+	/*
+	srand(time(NULL));
+	cout << "DICEs THE GAME" << endl;
+	char Turn;
+	int you = 0;
+	int ai = 0; 
+	int youScore=0, aiScore=0;
+	do
+	{
+		cout << "\npress h start match" << endl;
+		cin >> Turn;
+	} while (Turn != 'h');
+	int youRes, aiRes;
+	do
+	{
+		youRes = Res();
+		cout << "Your result: " << youRes << endl;
+		aiRes = Res();
+		cout << "Computer result: " << aiRes << endl;
+	} while (youRes == aiRes);
+	if (youRes > aiRes)
+	{
+		for (int i = 1; i <= 5; i++)
+		{
+			do
+			{
+				cout << "\n press h " << endl;
+				cin >> Turn;
+			} while (Turn != 'h');
+			youScore += Res();
+			aiScore += Res();
+
+		}
+		cout << "ur total score: " << youScore << endl;
+		cout << "\nai total score: " << aiScore << endl;
+	}
+	else
+	{
+		for (int i = 1; i <= 5; i++)
+		{
+			aiScore += Res();
+			do
+			{
+				cout << "\npress h" << endl;
+				cin >> Turn;
+			} while (Turn != 'h');
+			youScore += Res();
+
+		}
+		cout << "ur total score: " << youScore << endl;
+		cout << "ai total score: " << aiScore << endl;
+	}
+	if (youScore == aiScore)
+	{
+		cout << "\n\ntie \n\n" << endl;
+	}
+	else
+	{
+		if (youScore > aiScore)
+		{
+			cout << "\n\nYou won! Congratulations!\n\n" << endl;
+		}
+		if (youScore < aiScore)
+		{
+			cout << "\n\nComputer won! Good luck next time!\n\n" << endl;
+		}
+	}
+	cout << "game stats:\n\n";
+	cout << "Your range: " << youScore / 5.0 << endl;
+	cout << "Computer range: " << aiScore / 5.0 << endl;
+	cout << "\n";
+	*/
+
+
+
+	//#2
+	/*
+	int a, b;
+	cout << "Enter highth and width\n";
+	cin >> a;
+	cin >> b;
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < b; j++) {
+			cout << " * ";
+		}
+		cout << endl;
+	}
+	*/
+
+	//#3
+	/*
+	int n;
+	int res;
+
+	cin >> n;
+	res = 1;
+	for (int i = 1; i <= n; i++) {
+		res = res * i;
+	}
+	cout << res;
+	*/
+
+
+	//#4
+	/*
+	int a;
+	cin >> a;
+	for (int i = 2; i <= sqrt(a); i++) {
+		if (a % i == 0) {
+			cout << "not prime \n";
+			return 0;
+		}
+	}
+	cout << a << " is prime number";
+	*/
+
+
+
+//#5
+/*
+const int a = 10;
+int arr[a];
+int max=0;
+int min=0;
+for (int i = 0; i < a; i++) {
+		arr[i] = rand() % 10;
+		cout << arr[i]<<" ";
+		if (max < arr[i])
+			max = arr[i]; 
+		if (min > arr[i])
+			min = arr[i];
+}
+
+cout << "min: "<<min << endl;
+cout << "max:"<<max << endl;
+*/
+
+
+return 0;
+}
